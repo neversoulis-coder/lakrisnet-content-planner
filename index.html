@@ -6,454 +6,325 @@
     <title>LakrisNet Content Planner</title>
     <meta
       name="description"
-      content="LakrisNet Content Planner — a polished publishing workspace mockup for Pinterest-ready creator workflows."
+      content="LakrisNet Content Planner is a publishing workspace that lets creators connect their own Pinterest account, pick a board and schedule their own Pins."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="site-bg"></div>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#top">
-          <span class="brand-mark">LN</span>
-          <span class="brand-copy">
-            <strong>LakrisNet Content Planner</strong>
-            <span>creator workflow presentation</span>
-          </span>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="LakrisNet Content Planner, home">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span class="brand-name">LakrisNet Content Planner<small>publishing workspace</small></span>
         </a>
-
-        <nav class="topnav">
-          <a href="#overview">Overview</a>
-          <a href="#queue">Queue</a>
-          <a href="#trust">Trust</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
+        <nav class="nav" aria-label="Main">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#permissions">Permissions</a>
+          <a class="nav-cta" href="privacy-policy.html">Privacy policy</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <section class="hero-panel" id="top">
-          <div class="hero-copy">
-            <div class="eyebrow-row">
-              <span class="eyebrow">LakrisNet Product Preview</span>
-              <span class="soft-pill">Public-facing site draft</span>
-            </div>
-            <h1>Dashboard-style product site with a cleaner visual identity and a more serious feel.</h1>
-            <p>
-              This version keeps the same idea as your software — engines, statuses, queue, approvals,
-              integrations, and admin visibility — but uses a different visual language so it feels like a
-              polished product website instead of a direct clone of your live app.
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <div>
+            <span class="kicker">Pinterest scheduling</span>
+            <h1>Plan your Pins like an <em>editorial calendar</em>.</h1>
+            <p class="lead">
+              LakrisNet Content Planner is a small publishing workspace. You connect your own Pinterest
+              account, choose one of your boards, prepare a Pin and pick a time. The planner publishes it then
+              and shows you the result.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="#overview">View workspace</a>
-              <a class="btn btn-secondary" href="privacy-policy.html">Open privacy policy</a>
+              <a class="btn btn-primary" href="#how">See how it works</a>
+              <a class="btn btn-ghost" href="privacy-policy.html">Privacy policy</a>
             </div>
+            <p class="hero-note">
+              Official Pinterest sign-in &nbsp;·&nbsp; one Pin at a time &nbsp;·&nbsp; disconnect whenever you want
+            </p>
           </div>
 
-          <aside class="hero-snapshot">
-            <div class="snapshot-card">
-              <div class="snapshot-top">
-                <div>
-                  <div class="snapshot-label">Focused module</div>
-                  <div class="snapshot-title">Pinterest workflow</div>
-                </div>
-                <span class="badge badge-ready">ready</span>
+          <div class="board" aria-hidden="true">
+            <div class="board-head">
+              <span class="board-title">This week</span>
+              <span class="board-sub">Home studio ideas</span>
+            </div>
+            <div class="week">
+              <div>
+                <div class="day-label"><b>Mon</b> 10</div>
+                <div class="pin art-1"></div>
+                <p class="pin-cap">10:30 · <span class="ok">published</span></p>
+                <div class="pin art-2"></div>
+                <p class="pin-cap">16:00 · <span class="ok">published</span></p>
               </div>
-
-              <div class="snapshot-grid">
-                <div class="stat-card">
-                  <span class="stat-label">Connected boards</span>
-                  <strong class="stat-value">4</strong>
-                </div>
-                <div class="stat-card">
-                  <span class="stat-label">Scheduled today</span>
-                  <strong class="stat-value">2</strong>
-                </div>
-                <div class="stat-card">
-                  <span class="stat-label">Approval queue</span>
-                  <strong class="stat-value">1</strong>
-                </div>
-                <div class="stat-card">
-                  <span class="stat-label">Token health</span>
-                  <strong class="stat-value">stable</strong>
-                </div>
+              <div>
+                <div class="day-label"><b>Tue</b> 11</div>
+                <div class="pin art-3"></div>
+                <p class="pin-cap">14:15 · next</p>
+                <div class="pin art-5"></div>
+                <p class="pin-cap">19:30</p>
               </div>
-
-              <div class="progress-card">
-                <div class="progress-head">
-                  <span>Presentation confidence</span>
-                  <span>91%</span>
-                </div>
-                <div class="progress-track">
-                  <span class="progress-fill"></span>
-                </div>
-                <p>
-                  Positioned as a user-authorized scheduling workspace with review states, reporting, and
-                  connected account visibility.
-                </p>
+              <div>
+                <div class="day-label"><b>Wed</b> 12</div>
+                <div class="pin art-4"></div>
+                <p class="pin-cap">09:00</p>
+                <div class="pin art-7"></div>
+                <p class="pin-cap">17:20</p>
+              </div>
+              <div>
+                <div class="day-label"><b>Thu</b> 13</div>
+                <div class="pin art-6"></div>
+                <p class="pin-cap">11:00</p>
+                <div class="pin art-8"></div>
+                <p class="pin-cap">18:45</p>
               </div>
             </div>
-          </aside>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="workspace-block" id="overview">
+      <!-- How it works: steps on the left, what you see on the right -->
+      <section class="section section-alt" id="how">
+        <div class="wrap">
           <div class="section-head">
-            <div>
-              <span class="section-kicker">Product modules</span>
-              <h2>Platform overview</h2>
-            </div>
-            <div class="section-note">Same product concept, redesigned with a cooler editorial UI direction.</div>
+            <span class="kicker">How it works</span>
+            <h2>From your image to a live Pin.</h2>
           </div>
 
-          <div class="engine-grid">
-            <article class="engine-card accent-pinterest">
-              <div class="engine-head">
-                <div class="engine-id">
-                  <span class="icon-wrap">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-4.9 0-8 3.3-8 7.4 0 2.8 1.3 5 3.7 5.9l1.1-3.7c-.3-.7-.5-1.5-.5-2.4 0-2.4 1.7-4.6 4.4-4.6 2.1 0 3.2 1.3 3.2 2.9 0 1.8-1.1 4.4-1.1 5.9 0 1.4 1 2.6 2.6 2.6 3.1 0 5.2-3.7 5.2-8.2 0-3.5-3-5.8-6.6-5.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="flow">
+            <ol class="flow-steps" role="tablist" aria-label="Steps">
+              <li>
+                <button class="flow-step is-active" role="tab" aria-selected="true" aria-controls="screen-1" id="step-1">
+                  <span class="flow-num">1</span>
+                  <span>
+                    <strong>Connect with Pinterest</strong>
+                    <span class="flow-text">You sign in on pinterest.com and approve access. The planner gets a token
+                      and never sees your password.</span>
                   </span>
-                  <div>
-                    <h3>Pinterest</h3>
-                    <p>Original content scheduling, board selection, reports, and approvals.</p>
-                  </div>
-                </div>
-                <span class="badge badge-primary">primary</span>
-              </div>
-
-              <div class="metric-row">
-                <div class="mini-metric"><span>Boards</span><strong>4</strong></div>
-                <div class="mini-metric"><span>Scheduled</span><strong>7</strong></div>
-                <div class="mini-metric"><span>Today</span><strong>2</strong></div>
-              </div>
-
-              <div class="chip-row">
-                <span class="chip">Boards</span>
-                <span class="chip">Pins</span>
-                <span class="chip">Review</span>
-                <span class="chip">Reports</span>
-              </div>
-
-              <div class="card-actions">
-                <button class="btn btn-card">Open workspace</button>
-                <button class="icon-btn" aria-label="Pinterest settings">
-                  <svg viewBox="0 0 24 24"><path d="M12 3.8l1.3 2.3 2.6.5.8 2.5 2.1 1.7-.8 2.5.8 2.5-2.1 1.7-.8 2.5-2.6.5-1.3 2.3-2.4-1-2.4 1-1.3-2.3-2.6-.5-.8-2.5-2.1-1.7.8-2.5-.8-2.5 2.1-1.7.8-2.5 2.6-.5 1.3-2.3 2.4 1zM12 8.4A3.6 3.6 0 1 0 12 15.6A3.6 3.6 0 1 0 12 8.4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
                 </button>
-              </div>
-            </article>
-
-            <article class="engine-card accent-reddit">
-              <div class="engine-head">
-                <div class="engine-id">
-                  <span class="icon-wrap">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16.2c1 .8 2.4 1.2 4 1.2s3-.4 4-1.2M8.2 10.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7.6 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7.3l1-3 3 .7M6.3 11.4c0-2.7 2.6-4.8 5.7-4.8 3.1 0 5.7 2.1 5.7 4.8 0 2.6-2.6 4.7-5.7 4.7-3.1 0-5.7-2.1-5.7-4.7zm11.1-4.8a1.4 1.4 0 1 0 0-2.8 1.4 1.4 0 0 0 0 2.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </li>
+              <li>
+                <button class="flow-step" role="tab" aria-selected="false" aria-controls="screen-2" id="step-2">
+                  <span class="flow-num">2</span>
+                  <span>
+                    <strong>Choose a board</strong>
+                    <span class="flow-text">Your boards are loaded from your account. Pick where the Pin should go.</span>
                   </span>
-                  <div>
-                    <h3>Reddit</h3>
-                    <p>Draft queue, media states, flair placeholders, and scheduled post review.</p>
-                  </div>
-                </div>
-                <span class="badge badge-neutral">ok</span>
-              </div>
-
-              <div class="metric-row">
-                <div class="mini-metric"><span>Scheduled</span><strong>3</strong></div>
-                <div class="mini-metric"><span>Today</span><strong>0</strong></div>
-                <div class="mini-metric"><span>Next run</span><strong>20:30</strong></div>
-              </div>
-
-              <div class="chip-row">
-                <span class="chip">Video / Photo</span>
-                <span class="chip">Flairs</span>
-                <span class="chip">Drafts</span>
-              </div>
-
-              <div class="card-actions">
-                <button class="btn btn-card">Open</button>
-                <button class="icon-btn" aria-label="Reddit settings">
-                  <svg viewBox="0 0 24 24"><path d="M12 3.8l1.3 2.3 2.6.5.8 2.5 2.1 1.7-.8 2.5.8 2.5-2.1 1.7-.8 2.5-2.6.5-1.3 2.3-2.4-1-2.4 1-1.3-2.3-2.6-.5-.8-2.5-2.1-1.7.8-2.5-.8-2.5 2.1-1.7.8-2.5 2.6-.5 1.3-2.3 2.4 1zM12 8.4A3.6 3.6 0 1 0 12 15.6A3.6 3.6 0 1 0 12 8.4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
                 </button>
-              </div>
-            </article>
-
-            <article class="engine-card accent-da">
-              <div class="engine-head">
-                <div class="engine-id">
-                  <span class="icon-wrap">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.3 4.5h6.2l-1.7 4h2.9l-6.2 11 1.8-5.2H8.1l4.2-9.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </li>
+              <li>
+                <button class="flow-step" role="tab" aria-selected="false" aria-controls="screen-3" id="step-3">
+                  <span class="flow-num">3</span>
+                  <span>
+                    <strong>Prepare the Pin</strong>
+                    <span class="flow-text">Your own image, a title, a description and a link. Change anything until it
+                      goes live.</span>
                   </span>
-                  <div>
-                    <h3>DeviantArt</h3>
-                    <p>OAuth accounts, tag sets, publication queue, and token health status.</p>
-                  </div>
-                </div>
-                <span class="badge badge-warning">auth</span>
-              </div>
-
-              <div class="metric-row">
-                <div class="mini-metric"><span>Accounts</span><strong>2</strong></div>
-                <div class="mini-metric"><span>Scheduled</span><strong>0</strong></div>
-                <div class="mini-metric"><span>Issues</span><strong>2</strong></div>
-              </div>
-
-              <div class="chip-row">
-                <span class="chip">OAuth</span>
-                <span class="chip">Sta.sh</span>
-                <span class="chip">Tags</span>
-              </div>
-
-              <div class="card-actions">
-                <button class="btn btn-card">Open</button>
-                <button class="icon-btn" aria-label="DeviantArt settings">
-                  <svg viewBox="0 0 24 24"><path d="M12 3.8l1.3 2.3 2.6.5.8 2.5 2.1 1.7-.8 2.5.8 2.5-2.1 1.7-.8 2.5-2.6.5-1.3 2.3-2.4-1-2.4 1-1.3-2.3-2.6-.5-.8-2.5-2.1-1.7.8-2.5-.8-2.5 2.1-1.7.8-2.5 2.6-.5 1.3-2.3 2.4 1zM12 8.4A3.6 3.6 0 1 0 12 15.6A3.6 3.6 0 1 0 12 8.4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
                 </button>
-              </div>
-            </article>
-
-            <article class="engine-card accent-admin">
-              <div class="engine-head">
-                <div class="engine-id">
-                  <span class="icon-wrap">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6l6 2.4v5.3c0 4-2.4 7.5-6 9.1-3.6-1.6-6-5.1-6-9.1V6l6-2.4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </li>
+              <li>
+                <button class="flow-step" role="tab" aria-selected="false" aria-controls="screen-4" id="step-4">
+                  <span class="flow-num">4</span>
+                  <span>
+                    <strong>Schedule and track</strong>
+                    <span class="flow-text">At the chosen time the planner creates the Pin and keeps its link and status.</span>
                   </span>
-                  <div>
-                    <h3>Admin panel</h3>
-                    <p>Roles, approvals, audit logs, warnings, and moderation visibility.</p>
-                  </div>
-                </div>
-                <span class="badge badge-soft">admin</span>
-              </div>
-
-              <div class="metric-row">
-                <div class="mini-metric"><span>Users</span><strong>3</strong></div>
-                <div class="mini-metric"><span>Pending</span><strong>1</strong></div>
-                <div class="mini-metric"><span>Warnings</span><strong>9</strong></div>
-              </div>
-
-              <div class="chip-row">
-                <span class="chip">Roles</span>
-                <span class="chip">Approvals</span>
-                <span class="chip">Logs</span>
-              </div>
-
-              <div class="card-actions">
-                <button class="btn btn-card">Open</button>
-                <button class="icon-btn" aria-label="Admin settings">
-                  <svg viewBox="0 0 24 24"><path d="M12 3.8l1.3 2.3 2.6.5.8 2.5 2.1 1.7-.8 2.5.8 2.5-2.1 1.7-.8 2.5-2.6.5-1.3 2.3-2.4-1-2.4 1-1.3-2.3-2.6-.5-.8-2.5-2.1-1.7.8-2.5-.8-2.5 2.1-1.7.8-2.5 2.6-.5 1.3-2.3 2.4 1zM12 8.4A3.6 3.6 0 1 0 12 15.6A3.6 3.6 0 1 0 12 8.4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
                 </button>
-              </div>
-            </article>
-          </div>
-        </section>
+              </li>
+            </ol>
 
-        <section class="tab-block" id="queue">
-          <div class="tabs" role="tablist" aria-label="site sections">
-            <button class="tab-btn is-active" data-tab="queue-panel">Queue</button>
-            <button class="tab-btn" data-tab="reports-panel">Reports</button>
-            <button class="tab-btn" data-tab="trust-panel">Trust</button>
-            <button class="tab-btn" data-tab="copy-panel">Copy</button>
-          </div>
+            <div class="flow-screen">
+              <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span id="screen-url">pinterest.com/oauth</span></div>
 
-          <div class="tab-panel is-active" id="queue-panel">
-            <div class="queue-layout">
-              <div class="surface-panel">
-                <div class="panel-head">
-                  <div>
-                    <span class="section-kicker">Scheduling view</span>
-                    <h2>Queued items</h2>
+              <!-- 1. Consent -->
+              <div class="screen is-active" id="screen-1" role="tabpanel" aria-labelledby="step-1">
+                <div class="consent">
+                  <div class="consent-apps" aria-hidden="true">
+                    <span class="app-badge">L</span>
+                    <span class="consent-link"></span>
+                    <span class="app-badge app-badge-alt">P</span>
                   </div>
-                  <span class="soft-pill">review states visible</span>
-                </div>
-
-                <div class="queue-list">
-                  <article class="queue-card">
-                    <div>
-                      <div class="queue-tags"><span class="chip chip-dark">Pinterest</span><span class="badge badge-ready">approved</span></div>
-                      <h3>Studio desk setup moodboard</h3>
-                      <p>Board: Creator workspace</p>
-                    </div>
-                    <div class="queue-slot">
-                      <span>Slot</span>
-                      <strong>Today · 10:30</strong>
-                    </div>
-                  </article>
-
-                  <article class="queue-card">
-                    <div>
-                      <div class="queue-tags"><span class="chip chip-dark">Pinterest</span><span class="badge badge-primary">scheduled</span></div>
-                      <h3>Minimal wardrobe ideas set</h3>
-                      <p>Board: Style inspiration</p>
-                    </div>
-                    <div class="queue-slot">
-                      <span>Slot</span>
-                      <strong>Today · 14:15</strong>
-                    </div>
-                  </article>
-
-                  <article class="queue-card">
-                    <div>
-                      <div class="queue-tags"><span class="chip chip-dark">Reddit</span><span class="badge badge-neutral">draft</span></div>
-                      <h3>Weekly creator recap draft</h3>
-                      <p>Review before publish</p>
-                    </div>
-                    <div class="queue-slot">
-                      <span>Slot</span>
-                      <strong>Tomorrow · 12:00</strong>
-                    </div>
-                  </article>
-
-                  <article class="queue-card">
-                    <div>
-                      <div class="queue-tags"><span class="chip chip-dark">DeviantArt</span><span class="badge badge-warning">needs attention</span></div>
-                      <h3>Illustration batch upload</h3>
-                      <p>Token health warning</p>
-                    </div>
-                    <div class="queue-slot">
-                      <span>Status</span>
-                      <strong>Pending auth refresh</strong>
-                    </div>
-                  </article>
-                </div>
-              </div>
-
-              <aside class="stack-col">
-                <div class="surface-panel compact-panel">
-                  <div class="panel-head small-head">
-                    <div>
-                      <span class="section-kicker">Snapshot</span>
-                      <h2>Reporting</h2>
-                    </div>
-                  </div>
-                  <div class="summary-grid">
-                    <div class="summary-card"><span>Published this week</span><strong>9</strong></div>
-                    <div class="summary-card"><span>Ready for review</span><strong>1</strong></div>
-                    <div class="summary-card"><span>Duplicate checks</span><strong>active</strong></div>
-                    <div class="summary-card"><span>Token health</span><strong>stable</strong></div>
-                  </div>
-                </div>
-
-                <div class="surface-panel compact-panel">
-                  <div class="panel-head small-head">
-                    <div>
-                      <span class="section-kicker">Why it works</span>
-                      <h2>Better review link</h2>
-                    </div>
-                  </div>
-                  <ul class="bullet-list">
-                    <li>Looks like a real software workspace, not a generic one-page template.</li>
-                    <li>Keeps Pinterest as the strongest module without copying your live UI too closely.</li>
-                    <li>Shows approvals, queues, and admin structure in a believable way.</li>
+                  <h3>LakrisNet Content Planner would like to:</h3>
+                  <ul>
+                    <li>See your public profile info</li>
+                    <li>See your boards</li>
+                    <li>See and create Pins</li>
                   </ul>
-                </div>
-              </aside>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="reports-panel">
-            <div class="dual-grid">
-              <div class="surface-panel">
-                <div class="panel-head">
-                  <div>
-                    <span class="section-kicker">First-party metrics</span>
-                    <h2>Workspace reporting</h2>
+                  <div class="consent-actions">
+                    <span class="fake-btn">Cancel</span>
+                    <span class="fake-btn fake-btn-dark">Give access</span>
                   </div>
-                  <span class="soft-pill">same-account framing</span>
-                </div>
-                <div class="report-grid">
-                  <div class="report-card"><span>Connected engines</span><strong>4</strong><p>Visible platform status overview</p></div>
-                  <div class="report-card"><span>Scheduled items</span><strong>11</strong><p>Queue and approval friendly presentation</p></div>
-                  <div class="report-card"><span>Approval queue</span><strong>1</strong><p>Optional internal review step</p></div>
-                  <div class="report-card"><span>Audit events</span><strong>29</strong><p>Public product framing only</p></div>
+                  <p class="consent-foot">You can remove access at any time in your Pinterest settings.</p>
                 </div>
               </div>
 
-              <div class="surface-panel">
-                <div class="panel-head">
-                  <div>
-                    <span class="section-kicker">Module note</span>
-                    <h2>Pinterest emphasis</h2>
-                  </div>
-                </div>
-                <p class="panel-copy">
-                  The site language frames Pinterest as an OAuth-based workflow for original or authorized content,
-                  with board choice, scheduling, reporting, and optional review. That makes the public page look
-                  more intentional and easier to defend during review.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="trust-panel">
-            <div class="trust-grid" id="trust">
-              <article class="trust-card">
-                <h3>OAuth-based connections</h3>
-                <p>Connected accounts are shown as user-authorized integrations with clear status visibility.</p>
-              </article>
-              <article class="trust-card">
-                <h3>Approval workflow</h3>
-                <p>Publishing is presented as a controlled queue with optional review and audit visibility.</p>
-              </article>
-              <article class="trust-card">
-                <h3>First-party reporting</h3>
-                <p>The public site positions reporting around the same account that scheduled the content.</p>
-              </article>
-              <article class="trust-card">
-                <h3>Clean product framing</h3>
-                <p>The copy avoids spammy wording and reads like a creator workspace for original content.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="copy-panel">
-            <div class="dual-grid">
-              <div class="surface-panel">
-                <div class="panel-head">
-                  <div>
-                    <span class="section-kicker">Suggested site copy</span>
-                    <h2>Public product summary</h2>
-                  </div>
-                </div>
-                <div class="copy-block">
-                  <p>
-                    LakrisNet Content Planner is a publishing workspace for creators and small teams who manage
-                    original content across connected platforms.
-                  </p>
-                  <p>
-                    The Pinterest module lets an authenticated user connect their own account, choose boards,
-                    prepare visual content, schedule individual Pins, and review posting status and first-party
-                    performance information for that same account.
-                  </p>
-                  <p>
-                    The product is presented as a controlled workflow tool with optional review, audit visibility,
-                    and duplicate-prevention checks. It is not framed as a bulk automation or engagement
-                    manipulation service.
-                  </p>
-                </div>
-              </div>
-
-              <div class="surface-panel">
-                <div class="panel-head">
-                  <div>
-                    <span class="section-kicker">Design note</span>
-                    <h2>What changed</h2>
-                  </div>
-                </div>
-                <ul class="bullet-list">
-                  <li>Different palette: navy, plum, indigo, pearl.</li>
-                  <li>Buttons and icon containers are larger and cleaner.</li>
-                  <li>Structure still mirrors your product idea: modules, queue, reports, admin.</li>
+              <!-- 2. Boards -->
+              <div class="screen" id="screen-2" role="tabpanel" aria-labelledby="step-2" hidden>
+                <p class="screen-title">Publish to board</p>
+                <ul class="board-pick">
+                  <li><span class="radio"></span>Reading corners <small>34 Pins</small></li>
+                  <li class="picked"><span class="radio"></span>Home studio ideas <small>112 Pins</small></li>
+                  <li><span class="radio"></span>Autumn palettes <small>58 Pins</small></li>
+                  <li><span class="radio"></span>Ceramics &amp; shelves <small>21 Pins</small></li>
                 </ul>
               </div>
+
+              <!-- 3. Pin form -->
+              <div class="screen" id="screen-3" role="tabpanel" aria-labelledby="step-3" hidden>
+                <div class="pin-form">
+                  <div class="pin art-1 pin-preview"></div>
+                  <div class="fields">
+                    <label>Title<span class="field">Warm desk corner for slow mornings</span></label>
+                    <label>Description<span class="field field-tall">Oak desk, linen curtain and a single lamp. Full list of pieces on the blog.</span></label>
+                    <label>Link<span class="field">studio-notes.example/desk-corner</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Queue -->
+              <div class="screen" id="screen-4" role="tabpanel" aria-labelledby="step-4" hidden>
+                <p class="screen-title">Queue</p>
+                <table class="queue">
+                  <thead><tr><th>Pin</th><th>Board</th><th>Time</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>Reading nook, warm light</td><td>Reading corners</td><td>Mon 10:30</td><td><a class="ok">published ↗</a></td></tr>
+                    <tr><td>Warm desk corner</td><td>Home studio ideas</td><td>Tue 14:15</td><td>scheduled</td></tr>
+                    <tr><td>Ceramics shelf styling</td><td>Ceramics &amp; shelves</td><td>Thu 11:00</td><td>scheduled</td></tr>
+                    <tr><td>Rust &amp; ochre set</td><td>Autumn palettes</td><td>Fri 18:45</td><td class="err">image too small</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
 
-    <script src="app.js"></script>
+      <!-- Features: plain editorial list -->
+      <section class="section" id="features">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Features</span>
+            <h2>A calm queue, not a bulk-posting machine.</h2>
+          </div>
+          <dl class="feat-list">
+            <div>
+              <dt>Clear status</dt>
+              <dd>Every Pin is scheduled, published (with a link to the live Pin) or failed with the reason Pinterest
+                gave, so you can fix it and try again.</dd>
+            </div>
+            <div>
+              <dt>Edit or cancel</dt>
+              <dd>Until a Pin is published you can change its text, board, image or time, or take it out of the queue.</dd>
+            </div>
+            <div>
+              <dt>Duplicate check</dt>
+              <dd>You get a warning if the same image is already in the queue or was published recently.</dd>
+            </div>
+            <div>
+              <dt>Stays connected</dt>
+              <dd>Tokens are refreshed the way Pinterest describes, so a scheduled Pin doesn't fail because a token
+                expired overnight.</dd>
+            </div>
+            <div>
+              <dt>Other platforms</dt>
+              <dd>The same workspace has separate modules for Reddit and DeviantArt, each with its own sign-in.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Permissions -->
+      <section class="section section-alt" id="permissions">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Data &amp; permissions</span>
+            <h2>What we ask Pinterest for, and why.</h2>
+          </div>
+          <div class="perm-layout">
+            <div class="perm-table" role="table" aria-label="Pinterest permissions">
+              <div class="perm-row" role="row">
+                <code role="cell">user_accounts:read</code>
+                <p role="cell">Show which Pinterest account is connected (username and profile picture).</p>
+              </div>
+              <div class="perm-row" role="row">
+                <code role="cell">boards:read</code>
+                <p role="cell">List your boards so you can choose where a Pin is published.</p>
+              </div>
+              <div class="perm-row" role="row">
+                <code role="cell">pins:read</code>
+                <p role="cell">Check the status and link of Pins the planner published for you.</p>
+              </div>
+              <div class="perm-row" role="row">
+                <code role="cell">pins:write</code>
+                <p role="cell">Publish the Pins you scheduled, at the time you chose.</p>
+              </div>
+            </div>
+
+            <aside class="never">
+              <h3>What we never do</h3>
+              <ul>
+                <li>Ask for or store your Pinterest password.</li>
+                <li>Follow, like, comment or save on your behalf.</li>
+                <li>Read or collect other people's Pins and boards.</li>
+                <li>Sell, share or use your data for advertising.</li>
+              </ul>
+              <p class="note">
+                Disconnect inside the planner or revoke access in your Pinterest settings at any time. More in the
+                <a href="privacy-policy.html">privacy policy</a>.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact">
+        <div class="wrap">
+          <h2>Questions about the planner or your data?</h2>
+          <p>Write to <a href="mailto:neversoulis@gmail.com">neversoulis@gmail.com</a>. A person reads every message.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <span>© 2026 LakrisNet Content Planner</span>
+        <nav aria-label="Footer">
+          <a href="#how">How it works</a>
+          <a href="#permissions">Permissions</a>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="mailto:neversoulis@gmail.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Step switcher for the "How it works" block.
+      (function () {
+        var urls = ["pinterest.com/oauth", "planner / new pin / board", "planner / new pin", "planner / queue"];
+        var steps = document.querySelectorAll(".flow-step");
+        var screens = document.querySelectorAll(".screen");
+        var url = document.getElementById("screen-url");
+        steps.forEach(function (btn, i) {
+          btn.addEventListener("click", function () {
+            steps.forEach(function (b, j) {
+              b.classList.toggle("is-active", i === j);
+              b.setAttribute("aria-selected", i === j ? "true" : "false");
+              screens[j].hidden = i !== j;
+            });
+            url.textContent = urls[i];
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

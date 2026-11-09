@@ -1,28 +1,10 @@
-# LakrisNet Content Planner — Static Site Pack v2
+# LakrisNet Content Planner
 
-Files included:
-- `index.html`
-- `privacy-policy.html`
-- `styles.css`
-- `app.js`
+Public website and privacy policy for LakrisNet Content Planner, a publishing workspace that lets a user
+connect their own Pinterest account through OAuth, choose a board and schedule their own Pins.
 
-This version is designed for GitHub Pages and uses plain HTML, CSS, and JS.
+- Site: https://neversoulis-coder.github.io/lakrisnet-content-planner/
+- Privacy policy: https://neversoulis-coder.github.io/lakrisnet-content-planner/privacy-policy.html
+- Contact: neversoulis@gmail.com
 
-## GitHub Pages quick publish
-1. Create a public repository on GitHub.
-2. Upload all files from this folder to the repository root.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and the `/ (root)` folder.
-6. Save and wait for the site URL to appear.
-
-## Before publishing
-Replace the placeholder email in `privacy-policy.html`:
-- `support@lakrisnet.example`
-
-## Suggested URLs
-Main site:
-- `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`
-
-Privacy page:
-- `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/privacy-policy.html`
+Plain HTML and CSS, served by GitHub Pages from the `main` branch root.
