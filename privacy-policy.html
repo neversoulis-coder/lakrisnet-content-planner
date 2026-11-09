@@ -66,7 +66,8 @@
               <li><strong>Workspace account:</strong> the username and password you use to sign in to the planner
                 itself (the password is stored only as a hash), and your role in the workspace.</li>
               <li><strong>Content you add:</strong> images you upload, Pin titles, descriptions, destination links,
-                the chosen board and the scheduled time.</li>
+                the chosen board and the scheduled time. If you use the Discord module, the webhook links of your
+                own channels and the messages you schedule there.</li>
               <li><strong>Activity records:</strong> a log of who created, changed, published or deleted a scheduled
                 Pin and when, so the people in a workspace can see what happened.</li>
             </ul>
@@ -82,12 +83,13 @@
             </p>
             <ul>
               <li>basic account information: your username and profile picture (<code>user_accounts:read</code>);</li>
-              <li>the list of your boards, so you can choose where to publish (<code>boards:read</code>);</li>
+              <li>the list of your boards, so you can choose where to publish (<code>boards:read</code>), and the
+                ability to create a new board when you ask for one (<code>boards:write</code>);</li>
               <li>the ID, link and status of the Pins the planner publishes for you (<code>pins:read</code>, <code>pins:write</code>).</li>
             </ul>
             <p>
-              We only call the Pinterest API to do what you asked: show your account and boards, publish the Pins
-              you scheduled and check their status. We do not read other users' content, and we do not follow,
+              We only call the Pinterest API to do what you asked: show your account and boards, create a board
+              when you request it, publish the Pins you scheduled and check their status. We do not read other users' content, and we do not follow,
               save, like or comment on anything for you.
             </p>
           </section>

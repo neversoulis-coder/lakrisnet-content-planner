@@ -117,7 +117,8 @@
                   <span class="flow-num">2</span>
                   <span>
                     <strong>Choose a board</strong>
-                    <span class="flow-text">Your boards are loaded from your account. Pick where the Pin should go.</span>
+                    <span class="flow-text">Your boards are loaded from your account. Pick where the Pin should go, or
+                      create a new board right there.</span>
                   </span>
                 </button>
               </li>
@@ -156,7 +157,7 @@
                   <h3>LakrisNet Content Planner would like to:</h3>
                   <ul>
                     <li>See your public profile info</li>
-                    <li>See your boards</li>
+                    <li>See and create boards</li>
                     <li>See and create Pins</li>
                   </ul>
                   <div class="consent-actions">
@@ -236,7 +237,8 @@
             </div>
             <div>
               <dt>Other platforms</dt>
-              <dd>The same workspace has separate modules for Reddit and DeviantArt, each with its own sign-in.</dd>
+              <dd>The same workspace can post to your own Discord channels through webhooks. Reddit and DeviantArt
+                modules are in progress.</dd>
             </div>
           </dl>
         </div>
@@ -258,6 +260,10 @@
               <div class="perm-row" role="row">
                 <code role="cell">boards:read</code>
                 <p role="cell">List your boards so you can choose where a Pin is published.</p>
+              </div>
+              <div class="perm-row" role="row">
+                <code role="cell">boards:write</code>
+                <p role="cell">Create a new board, only when you ask for one in the planner.</p>
               </div>
               <div class="perm-row" role="row">
                 <code role="cell">pins:read</code>
