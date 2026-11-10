@@ -59,6 +59,9 @@
       .catch(function () {});
   }
 
+  var out = document.getElementById("acct-signout");
+  if (out) out.addEventListener("click", function () { write(null); });
+
   if (acct) {
     document.addEventListener("click", function (e) { if (!acct.contains(e.target)) acct.open = false; });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") acct.open = false; });
