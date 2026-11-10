@@ -54,39 +54,47 @@
             </p>
           </div>
 
-          <div class="board" aria-hidden="true">
-            <div class="board-head">
-              <span class="board-title">This week</span>
-              <span class="board-sub">Home studio ideas</span>
-            </div>
-            <div class="week">
-              <div>
-                <div class="day-label"><b>Mon</b> 10</div>
-                <div class="pin art-1"></div>
-                <p class="pin-cap">10:30 · <span class="ok">published</span></p>
-                <div class="pin art-2"></div>
-                <p class="pin-cap">16:00 · <span class="ok">published</span></p>
-              </div>
-              <div>
-                <div class="day-label"><b>Tue</b> 11</div>
-                <div class="pin art-3"></div>
-                <p class="pin-cap">14:15 · next</p>
-                <div class="pin art-5"></div>
-                <p class="pin-cap">19:30</p>
-              </div>
-              <div>
-                <div class="day-label"><b>Wed</b> 12</div>
-                <div class="pin art-4"></div>
-                <p class="pin-cap">09:00</p>
-                <div class="pin art-7"></div>
-                <p class="pin-cap">17:20</p>
-              </div>
-              <div>
-                <div class="day-label"><b>Thu</b> 13</div>
-                <div class="pin art-6"></div>
-                <p class="pin-cap">11:00</p>
-                <div class="pin art-8"></div>
-                <p class="pin-cap">18:45</p>
+          <div class="stage" aria-hidden="true">
+            <span class="blob blob-a"></span>
+            <span class="blob blob-b"></span>
+            <span class="blob blob-c"></span>
+            <span class="blob blob-d"></span>
+            <div class="tilt">
+              <div class="board">
+                <div class="board-head">
+                  <span class="board-title">This week</span>
+                  <span class="board-sub">Home studio ideas</span>
+                </div>
+                <div class="week">
+                  <div>
+                    <div class="day-label"><b>Mon</b> 10</div>
+                    <div class="pin art-1" style="--i:0"></div>
+                    <p class="pin-cap">10:30 · <span class="ok">published</span></p>
+                    <div class="pin art-2" style="--i:1"></div>
+                    <p class="pin-cap">16:00 · <span class="ok">published</span></p>
+                  </div>
+                  <div>
+                    <div class="day-label"><b>Tue</b> 11</div>
+                    <div class="pin art-3 is-next" style="--i:2"></div>
+                    <p class="pin-cap">14:15 · next</p>
+                    <div class="pin art-5" style="--i:3"></div>
+                    <p class="pin-cap">19:30</p>
+                  </div>
+                  <div>
+                    <div class="day-label"><b>Wed</b> 12</div>
+                    <div class="pin art-4" style="--i:4"></div>
+                    <p class="pin-cap">09:00</p>
+                    <div class="pin art-7" style="--i:5"></div>
+                    <p class="pin-cap">17:20</p>
+                  </div>
+                  <div>
+                    <div class="day-label"><b>Thu</b> 13</div>
+                    <div class="pin art-6" style="--i:6"></div>
+                    <p class="pin-cap">11:00</p>
+                    <div class="pin art-8" style="--i:7"></div>
+                    <p class="pin-cap">18:45</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -330,6 +338,25 @@
             });
             url.textContent = urls[i];
           });
+        });
+      })();
+
+      // Board leans toward the pointer (skipped for reduced motion and touch).
+      (function () {
+        var stage = document.querySelector(".stage");
+        var tilt = stage && stage.querySelector(".tilt");
+        if (!tilt || matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(hover: hover)").matches) return;
+        var hero = document.querySelector(".hero");
+        hero.addEventListener("pointermove", function (e) {
+          var r = stage.getBoundingClientRect();
+          var x = (e.clientX - (r.left + r.width / 2)) / r.width;
+          var y = (e.clientY - (r.top + r.height / 2)) / r.height;
+          tilt.style.setProperty("--rx", (x * 10).toFixed(2) + "deg");
+          tilt.style.setProperty("--ry", (-y * 8).toFixed(2) + "deg");
+        });
+        hero.addEventListener("pointerleave", function () {
+          tilt.style.setProperty("--rx", "0deg");
+          tilt.style.setProperty("--ry", "0deg");
         });
       })();
     </script>
